@@ -99,7 +99,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="736,8856" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="736,8280" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="categoryDataTable" />
       <Variable x:TypeArguments="sd:DataTable" Name="zoneDataTable" />
@@ -114,36 +114,34 @@
       <Variable x:TypeArguments="x:String" Name="deviceStatus" />
       <Variable x:TypeArguments="x:Boolean" Name="deviceIsActive" />
       <Variable x:TypeArguments="sd:DataTable" Name="testResultsDataTable" />
-      <Variable x:TypeArguments="x:String" Name="connectedOfficeEmail" />
-      <Variable x:TypeArguments="x:String" Name="connectedOfficePassword" />
+      <Variable x:TypeArguments="x:String" Name="connectedOfficeEmail">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">tzaakiyah@gmail.com</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="connectedOfficePassword">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">12pwpaT$</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Log in - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="674,1626" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="07799a1f-d681-48d4-8c06-69fa10a939e2" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Log in - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="674,1050" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="07799a1f-d681-48d4-8c06-69fa10a939e2" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1400" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,824" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="338,248" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter your email address" Title="Connected Office Email">
-              <ui:InputDialog.Result>
-                <OutArgument x:TypeArguments="x:String">[connectedOfficeEmail]</OutArgument>
-              </ui:InputDialog.Result>
-            </ui:InputDialog>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="338,248" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="True" Label="Please enter your password" Title="Connected Office Password">
-              <ui:InputDialog.Result>
-                <OutArgument x:TypeArguments="x:String">[connectedOfficePassword]</OutArgument>
-              </ui:InputDialog.Result>
-            </ui:InputDialog>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="07799a1f-d681-48d4-8c06-69fa10a939e2" Text="[connectedOfficeEmail]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Identity/Account/Login" DesignTimeRectangle="157, 384, 222, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT Input_Email'" FullSelectorArgument="&lt;webctrl id='Input_Email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_Email' tag='INPUT' type='email' class='form-control' aaname='Email' /&gt;" Guid="0fc60e25-79bd-46e1-80f0-6f0348fc19df" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOIAAAAqCAYAAACuq4cOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADzSURBVHhe7d2xasNAFETR/P/HuUplcOEiTcCksnG3YcARK3BKSVOcA9No1d76fQzgcEKEAqsQ74/nuFy/xunzbGYbLY2ltdkSYh7y0/ft5/UF2EIaS2tzjEuIqVSEsI+0lub+LCGmUGA/c3NChIMIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQoIEQq8DdGhUtjPv4dKne6GfaSxtPb2dHfkIZXmJzPbZmlsjjBWIQLHECIcboxfs7PC80+jQ+EAAAAASUVORK5CYII=" InformativeScreenshot="803b482f8d42ba9c9bf6cd279fd6f8b2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Log in - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
